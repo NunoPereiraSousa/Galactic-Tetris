@@ -1,0 +1,40 @@
+body {
+  font-family: 'Courier New', Courier, monospace !important;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg);
+  background-size: cover;
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+canvas#myCanvas {
+  border: 2px solid #c7c8c9;
+  border-radius: 10px;
+  text-align: center;
+  height: 80vh;
+  width: 20vw;
+}
+
+#canvasHolder {
+  margin-top: 4%;
+  text-align: center;
+}
+
+canvas#myCanvas2 {
+  border: 2px solid #c7c8c9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+canvas#myCanvas3 {
+  border: 2px solid #c7c8c9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+canvas#myCanvas4 {
+  border: 2px solid #c7c8c9;
+  border-radius: 10px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

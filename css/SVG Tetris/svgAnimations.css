@@ -1,0 +1,359 @@
+body {
+  font-family: 'Courier New', Courier, monospace !important;
+  color: #FFFFFF !important;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+body .container.hoverTetris {
+  height: 100vh;
+  width: 100vw;
+}
+
+body .container.hoverTetris .row.svg {
+  bottom: 41%;
+}
+
+body .container.hoverTetris .row.svg svg {
+  width: 20vw;
+  height: 100vh;
+}
+
+body .container.hoverTetris .row.svg svg .cls-1 {
+  fill: none;
+  stroke: transparent;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+}
+
+body .container.hoverTetris .row.svg svg .cls-1 {
+  -webkit-animation: text 5s 1s infinite;
+          animation: text 5s 1s infinite;
+}
+
+body .container.hoverTetris .row.blocks {
+  bottom: 0%;
+}
+
+body .container.hoverTetris .row.blocks svg {
+  width: 21vw;
+  height: 70vh;
+  margin-bottom: 3em;
+}
+
+body .container.hoverTetris .row.blocks svg .l {
+  fill: #f15a24;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .biggerL {
+  fill: #E71D36;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .line {
+  fill: #2EC4B6;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .line2 {
+  fill: #E71D36;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .square {
+  fill: #388659;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .square2 {
+  fill: #FF4E00;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .weird1 {
+  fill: #FF9F1C;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .mount {
+  fill: #2E86AB;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg .invertedI {
+  fill: #FF9F1C;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.05px;
+}
+
+body .container.hoverTetris .row.blocks svg #line {
+  -webkit-animation: falling 3s 2s forwards;
+          animation: falling 3s 2s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #square {
+  -webkit-animation: falling 3s 5s forwards;
+          animation: falling 3s 5s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #l {
+  -webkit-animation: falling 3s 8s forwards;
+          animation: falling 3s 8s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #line2 {
+  -webkit-animation: falling 3s 11s forwards;
+          animation: falling 3s 11s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #weird1 {
+  -webkit-animation: falling 3s 14s forwards;
+          animation: falling 3s 14s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #mount {
+  -webkit-animation: falling 3s 17s forwards;
+          animation: falling 3s 17s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #biggerL {
+  -webkit-animation: falling 3s 20s forwards;
+          animation: falling 3s 20s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #square2 {
+  -webkit-animation: falling 3s 23s forwards;
+          animation: falling 3s 23s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #invertedI {
+  -webkit-animation: falling 3s 26s forwards;
+          animation: falling 3s 26s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+body .container.hoverTetris .row.blocks svg #border {
+  stroke-width: 0.3px;
+  stroke-dasharray: 0.5;
+  stroke: red;
+  -webkit-animation: line 1s 29.5s forwards;
+          animation: line 1s 29.5s forwards;
+  -webkit-transform-origin: 50% -50%;
+          transform-origin: 50% -50%;
+  opacity: 0;
+}
+
+@-webkit-keyframes falling {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  10% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: translateY(14px);
+            transform: translateY(14px);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    opacity: 1;
+  }
+  90% {
+    -webkit-transform: translateY(18px);
+            transform: translateY(18px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+@keyframes falling {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  10% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+    opacity: 1;
+  }
+  30% {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: translateY(14px);
+            transform: translateY(14px);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    opacity: 1;
+  }
+  90% {
+    -webkit-transform: translateY(18px);
+            transform: translateY(18px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes line {
+  from {
+    stroke-dasharray: 0;
+    opacity: 1;
+  }
+  to {
+    stroke-dasharray: 0.5;
+    opacity: 1;
+  }
+}
+
+@keyframes line {
+  from {
+    stroke-dasharray: 0;
+    opacity: 1;
+  }
+  to {
+    stroke-dasharray: 0.5;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes text {
+  0% {
+    stroke-dasharray: 0 1400;
+    stroke: #fff;
+  }
+  70% {
+    stroke-dasharray: 1400 0;
+    stroke: #fff;
+  }
+  100% {
+    stroke-dasharray: 0 1400;
+    stroke: #fff;
+  }
+}
+
+@keyframes text {
+  0% {
+    stroke-dasharray: 0 1400;
+    stroke: #fff;
+  }
+  70% {
+    stroke-dasharray: 1400 0;
+    stroke: #fff;
+  }
+  100% {
+    stroke-dasharray: 0 1400;
+    stroke: #fff;
+  }
+}
+/*# sourceMappingURL=svgAnimations.css.map */

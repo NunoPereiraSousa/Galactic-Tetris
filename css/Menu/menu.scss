@@ -1,0 +1,108 @@
+$colors: (main-color: #465C69,
+    h2Color: #f7b267,
+    activeColor: #f7b267,
+    nav-color: rgba(0, 0, 0, .4),
+    shadowNav: 0 2px 2px 0.5px rgba(32, 37, 43, 0.1),
+    nav-font-color: #FFFFFF,
+    galactic: linear-gradient(45deg, rgba(255, 0, 0, .2),
+        rgba(100, 45, 0, .2),
+        rgba(255, 251, 0, .2),
+        rgba(72, 255, 0, .2),
+        rgba(0, 255, 213, .2),
+        rgba(0, 43, 255, .2),
+        rgba(122, 0, 255, .2),
+        rgba(255, 0, 200, .2),
+        rgba(255, 0, 0, .2)));
+
+
+$text: (textColor: #20252b);
+
+body {
+    font-family: 'Courier New', Courier, monospace !important;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    background-color: map-get($colors, nav-color);
+    font-size: 1.3em;
+
+    .navbar-nav.ml-auto li a.nav-link {
+        color: map-get($colors, nav-font-color);
+    }
+}
+
+.container:not(:first-child) {
+    margin-top: 3rem;
+}
+
+.container.animation {
+    width: 100vw;
+    height: 100vh;
+
+    .row.w-100 {
+        bottom: 18%;
+
+        hr {
+            border: 1px solid rgba(255, 251, 0, .15) !important;
+        }
+
+        h5 {
+            color: map-get($colors, nav-font-color);
+            font-size: 1.3rem !important;
+        }
+    }
+}
+
+.playGame,
+.rules,
+.aboutUs,
+.hoverTetris {
+    width: 50%;
+    background-color: transparent;
+    color: map-get($colors, nav-font-color) !important;
+    border: 4px solid map-get($colors, main-color) !important;
+    font-size: 1.5rem !important;
+}
+
+a:not(.navText) {
+    cursor: pointer;
+    position: relative;
+}
+
+a:not(.navText):before {
+    content: '';
+    background: map-get($colors, galactic);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: galactic 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+a:not(.navText):hover:before {
+    opacity: 1;
+}
+
+@keyframes galactic {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

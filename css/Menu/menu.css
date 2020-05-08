@@ -1,0 +1,103 @@
+body {
+  font-family: 'Courier New', Courier, monospace !important;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg);
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1.3em;
+}
+
+nav .navbar-nav.ml-auto li a.nav-link {
+  color: #FFFFFF;
+}
+
+.container:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.container.animation {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container.animation .row.w-100 {
+  bottom: 18%;
+}
+
+.container.animation .row.w-100 hr {
+  border: 1px solid rgba(255, 251, 0, 0.15) !important;
+}
+
+.container.animation .row.w-100 h5 {
+  color: #FFFFFF;
+  font-size: 1.3rem !important;
+}
+
+.playGame,
+.rules,
+.aboutUs,
+.hoverTetris {
+  width: 50%;
+  background-color: transparent;
+  color: #FFFFFF !important;
+  border: 4px solid #465C69 !important;
+  font-size: 1.5rem !important;
+}
+
+a:not(.navText) {
+  cursor: pointer;
+  position: relative;
+}
+
+a:not(.navText):before {
+  content: '';
+  background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(100, 45, 0, 0.2), rgba(255, 251, 0, 0.2), rgba(72, 255, 0, 0.2), rgba(0, 255, 213, 0.2), rgba(0, 43, 255, 0.2), rgba(122, 0, 255, 0.2), rgba(255, 0, 200, 0.2), rgba(255, 0, 0, 0.2));
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-animation: galactic 20s linear infinite;
+          animation: galactic 20s linear infinite;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+a:not(.navText):hover:before {
+  opacity: 1;
+}
+
+@-webkit-keyframes galactic {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes galactic {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/*# sourceMappingURL=menu.css.map */
